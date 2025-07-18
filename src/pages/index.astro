@@ -1,0 +1,176 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Fondo from '@/assets/novios/img-fondo.jpg'
+import Texture from '@/assets/novios/fondoPapel.png'
+import PostalFrente from '@/assets/postales/PostalFrente.png'
+import PostalFoto from '@/assets/postales/PostalFoto.png'
+import F1 from '@/assets/novios/IMG_0034.jpg'
+import F2 from '@/assets/novios/IMG_0066.jpg'
+import F3 from '@/assets/novios/IMG_0077.jpg'
+import F4 from '@/assets/novios/IMG_0091.jpg'
+import F6 from '@/assets/novios/IMG_0135.jpg'
+import F7 from '@/assets/novios/IMG_0148.jpg'
+import F8 from '@/assets/novios/IMG_0191.jpg'
+import F9 from '@/assets/novios/IMG_0196.jpg'
+---
+
+<Layout>
+	<section class="max-sm:min-h-[250dvh]">
+		<picture id="fondo" class="max-sm:fixed max-sm:h-full max-sm:scale-125">
+			<img src={Fondo.src} alt="Foto de fondo" class="max-sm:object-cover max-sm:h-full brightness-70" />
+		</picture>
+
+		<div class="sticky top-0 overflow-hidden max-sm:w-full max-sm:h-[100dvh] max-sm:flex max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:gap-9">
+			<img id="hero-postal" src={PostalFrente.src}
+				alt="Postal de la invitacion"
+				class="max-sm:w-72 relative right-full opacity-0"
+			/>
+			<img id="hero-postal" src={PostalFoto.src}
+				alt="Foto de los novios al respaldo de la postal"
+				class="max-sm:w-72 relative left-full opacity-0"
+			/>
+		</div>
+	</section>
+	
+	<section class="relative max-sm:min-h-[100dvh] max-sm:w-full max-sm:overflow-hidden">
+		<img src={Texture.src} alt="Papen con textura de fondo" class="absolute max-sm:object-cover max-md:w-full" />
+	</section>
+
+	<section class="relative max-sm:min-h-[100dvh] max-sm:w-full max-sm:overflow-hidden">
+		<img src={Texture.src} alt="Papen con textura de fondo" class="absolute max-sm:object-cover max-md:w-full" />
+
+		<div id="rollo-top"></div>
+		<div class="carrusel">
+			<picture class="carrusel__container">
+				<div class="carrusel__slide">
+					<img src={F1.src} alt="Foto de los novios" class="w-full h-full" />
+				</div>
+				<div class="carrusel__slide">
+					<img src={F2.src} alt="Foto de los novios" class="" />
+				</div>
+				<div class="carrusel__slide">
+					<img src={F4.src} alt="Foto de los novios" class="" />
+				</div>
+				<div class="carrusel__slide">
+					<img src={F3.src} alt="Foto de los novios" class="" />
+				</div>
+				<div class="carrusel__slide">
+					<img src={F6.src} alt="Foto de los novios" class="" />
+				</div>
+				<div class="carrusel__slide">
+					<img src={F8.src} alt="Foto de los novios" class="" />
+				</div>
+				<div class="carrusel__slide">
+					<img src={F7.src} alt="Foto de los novios" class="" />
+				</div>
+				<div class="carrusel__slide">
+					<img src={F9.src} alt="Foto de los novios" class="" />
+				</div>
+			</picture>
+		</div>
+		<div id="rollo-bottom"></div>
+	</section>
+</Layout>
+
+
+
+<script>
+	import { gsap } from 'gsap'	
+	import { ScrollTrigger } from 'gsap/ScrollTrigger'
+	import EmblaCarousel from 'embla-carousel'
+	import AutoScroll from 'embla-carousel-auto-scroll'
+
+	const emblaNode = document.querySelector('.carrusel')
+	const carrusel = EmblaCarousel(emblaNode, {loop: true}, [
+		AutoScroll(
+			{
+				startDelay: 10,
+				stopOnInteraction: false,
+				speed: 1.5
+			}
+		)
+	])
+	
+
+	gsap.registerPlugin(ScrollTrigger)
+
+	const tl = gsap.timeline({
+		scrollTrigger: {
+			scrub: 1,
+		}
+	})
+
+	tl.to('#fondo', {duration: 1, scale: 1})
+		.to('#hero-postal', {duration: .25, opacity: 1, left: '0%'}, .1)
+</script>
+
+<style>
+	.carrusel {
+		overflow: hidden;
+		height: 100dvh;
+		width: 100%;
+	}
+	.carrusel__container {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+	}
+	.carrusel__slide {
+		min-width: 100%;
+		position: relative;
+	}
+	.carrusel__slide::after, .carrusel__slide::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		width: 18px;
+		height: 102%;
+		background-color: #000;
+	}
+	.carrusel__slide::after {
+		right: 0;
+	}
+	.carrusel__slide::before {
+		left: 0;
+	}
+
+	#rollo-top, #rollo-bottom {
+		height: 10%;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		z-index: 1;
+		background-size: cover;
+		background-position: center;
+		animation: efecto linear infinite 6s;
+	}
+	#rollo-bottom {
+		top: 65%;
+	}
+	#rollo-top {
+		top: 25%;
+		rotate: 180deg;
+	}
+
+	@keyframes efecto {
+		0% {
+			background-image: url('../assets/rollos/1_1@4x-8.png')
+		}
+		20% {
+			background-image: url('../assets/rollos/2_1@4x-8.png')
+		}
+		40% {
+			background-image: url('../assets/rollos/4_1@4x-8.png')
+		}
+		60% {
+			background-image: url('../assets/rollos/5@4x-8.png')
+		}
+		80% {
+			background-image: url('../assets/rollos/6@4x-8.png')
+		}
+		100% {
+			background-image: url('../assets/rollos/7@4x-8.png')
+		}
+	}
+</style>
