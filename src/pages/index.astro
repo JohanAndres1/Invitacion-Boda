@@ -36,39 +36,39 @@ import F9 from '@/assets/novios/IMG_0196.jpg'
 		<img src={Texture.src} alt="Papen con textura de fondo" class="absolute max-sm:object-cover max-md:w-full" />
 	</section>
 
-	<section class="relative max-sm:min-h-[100dvh] max-sm:w-full max-sm:overflow-hidden">
-		<img src={Texture.src} alt="Papen con textura de fondo" class="absolute max-sm:object-cover max-md:w-full" />
-
-		<div id="rollo-top"></div>
-		<div class="carrusel">
-			<picture class="carrusel__container">
-				<div class="carrusel__slide">
-					<img src={F1.src} alt="Foto de los novios" class="w-full h-full" />
-				</div>
-				<div class="carrusel__slide">
-					<img src={F2.src} alt="Foto de los novios" class="" />
-				</div>
-				<div class="carrusel__slide">
-					<img src={F4.src} alt="Foto de los novios" class="" />
-				</div>
-				<div class="carrusel__slide">
-					<img src={F3.src} alt="Foto de los novios" class="" />
-				</div>
-				<div class="carrusel__slide">
-					<img src={F6.src} alt="Foto de los novios" class="" />
-				</div>
-				<div class="carrusel__slide">
-					<img src={F8.src} alt="Foto de los novios" class="" />
-				</div>
-				<div class="carrusel__slide">
-					<img src={F7.src} alt="Foto de los novios" class="" />
-				</div>
-				<div class="carrusel__slide">
-					<img src={F9.src} alt="Foto de los novios" class="" />
-				</div>
-			</picture>
+	<section id='papel' class="relative max-sm:min-h-[100dvh] max-sm:w-full max-sm:overflow-hidden">
+		<div class="max-sm:w-full max-sm:h-[100dvh] max-sm:flex max-sm:flex-col max-sm:justify-center">
+			<div id="rollo-top"></div>
+			<div class="carrusel">
+				<picture class="carrusel__container">
+					<div class="carrusel__slide">
+						<img src={F1.src} alt="Foto de los novios" class="w-full h-full" />
+					</div>
+					<div class="carrusel__slide">
+						<img src={F2.src} alt="Foto de los novios" class="" />
+					</div>
+					<div class="carrusel__slide">
+						<img src={F4.src} alt="Foto de los novios" class="" />
+					</div>
+					<div class="carrusel__slide">
+						<img src={F3.src} alt="Foto de los novios" class="" />
+					</div>
+					<div class="carrusel__slide">
+						<img src={F6.src} alt="Foto de los novios" class="" />
+					</div>
+					<div class="carrusel__slide">
+						<img src={F8.src} alt="Foto de los novios" class="" />
+					</div>
+					<div class="carrusel__slide">
+						<img src={F7.src} alt="Foto de los novios" class="" />
+					</div>
+					<div class="carrusel__slide">
+						<img src={F9.src} alt="Foto de los novios" class="" />
+					</div>
+				</picture>
+			</div>
+			<div id="rollo-bottom"></div>
 		</div>
-		<div id="rollo-bottom"></div>
 	</section>
 </Layout>
 
@@ -107,7 +107,6 @@ import F9 from '@/assets/novios/IMG_0196.jpg'
 <style>
 	.carrusel {
 		overflow: hidden;
-		height: 100dvh;
 		width: 100%;
 	}
 	.carrusel__container {
@@ -135,21 +134,19 @@ import F9 from '@/assets/novios/IMG_0196.jpg'
 		left: 0;
 	}
 
+
+	#papel {
+		background-image: url('../assets/novios/fondoPapel.png')
+	}
 	#rollo-top, #rollo-bottom {
-		height: 10%;
-		width: 100%;
-		position: absolute;
-		left: 0;
-		z-index: 1;
+		background-image: url('../assets/rollos/1_1@4x-8.png');
 		background-size: cover;
 		background-position: center;
+		height: 5%;
+		width: 100%;
 		animation: efecto linear infinite 6s;
 	}
-	#rollo-bottom {
-		top: 65%;
-	}
 	#rollo-top {
-		top: 25%;
 		rotate: 180deg;
 	}
 
