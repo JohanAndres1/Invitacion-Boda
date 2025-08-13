@@ -1,69 +1,96 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import Fondo from '@/assets/novios/img-fondo.jpg'
-import Texture from '@/assets/novios/fondoPapel.png'
-import PostalFrente from '@/assets/postales/PostalFrente.png'
-import PostalFoto from '@/assets/postales/PostalFoto.png'
-import F1 from '@/assets/novios/IMG_0034.jpg'
-import F2 from '@/assets/novios/IMG_0066.jpg'
-import F3 from '@/assets/novios/IMG_0077.jpg'
-import F4 from '@/assets/novios/IMG_0091.jpg'
-import F6 from '@/assets/novios/IMG_0135.jpg'
-import F7 from '@/assets/novios/IMG_0148.jpg'
-import F8 from '@/assets/novios/IMG_0191.jpg'
-import F9 from '@/assets/novios/IMG_0196.jpg'
+import Fondo from '@/assets/fondos/novios.webp'
+import Division from '@/assets/fondos/division.webp'
+import Gif from '@/assets/fondos/tarjeta.gif'
+import Novios from '@/assets/fondos/versiculo-novios.webp'
+import Foto1 from '@/assets/carrusel/01.webp'
+import Foto2 from '@/assets/carrusel/02.webp'
+import Foto3 from '@/assets/carrusel/03.webp'
+import Foto4 from '@/assets/carrusel/04.webp'
+import Foto5 from '@/assets/carrusel/05.webp'
+import Foto6 from '@/assets/carrusel/06.webp'
+import Foto7 from '@/assets/carrusel/07.webp'
+import Foto8 from '@/assets/carrusel/08.webp'
+import Foto9 from '@/assets/carrusel/09.webp'
+import Foto10 from '@/assets/carrusel/10.webp'
+import Foto11 from '@/assets/carrusel/11.webp'
+import Foto12 from '@/assets/carrusel/12.webp'
+import Foto13 from '@/assets/carrusel/13.webp'
+import Foto14 from '@/assets/carrusel/14.webp'
+import Foto15 from '@/assets/carrusel/15.webp'
+import Foto16 from '@/assets/carrusel/16.webp'
 ---
 
 <Layout>
-	<section class="max-sm:min-h-[250dvh]">
-		<picture id="fondo" class="max-sm:fixed max-sm:h-full max-sm:scale-125">
-			<img src={Fondo.src} alt="Foto de fondo" class="max-sm:object-cover max-sm:h-full brightness-70" />
+	<section class="max-sm:min-h-[150dvh]">
+		<picture id="fondo" class="fixed w-full scale-125">
+			<img src={Fondo.src} alt="Foto de fondo" class="object-cover h-full brightness-70" />
 		</picture>
 
-		<div class="sticky top-0 overflow-hidden max-sm:w-full max-sm:h-[100dvh] max-sm:flex max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:gap-9">
-			<img id="hero-postal" src={PostalFrente.src}
-				alt="Postal de la invitacion"
-				class="max-sm:w-72 relative right-full opacity-0"
-			/>
-			<img id="hero-postal" src={PostalFoto.src}
-				alt="Foto de los novios al respaldo de la postal"
-				class="max-sm:w-72 relative left-full opacity-0"
-			/>
+		<div class="sticky top-0 overflow-hidden w-full h-[100dvh] flex items-center">
+			<img id="hero-postal" src={Gif.src} alt="Postales" >
 		</div>
 	</section>
 	
-	<section class="relative max-sm:min-h-[100dvh] max-sm:w-full max-sm:overflow-hidden">
-		<img src={Texture.src} alt="Papen con textura de fondo" class="absolute max-sm:object-cover max-md:w-full" />
+	<section id='division' class="relative h-[80dvh] w-full overflow-hidden">
+		<h2 class="relative z-10 font-number text-5xl text-center mt-20">31 AGOSTO 2025</h2>
+		<h2 class="relative z-10 font-text text-4xl text-center">2:00 <b class="text-3xl">PM</b></h2>
+		<img src={Novios.src} alt="Foto de los novios" class="relative my-8 w-4/5 mx-auto" />
 	</section>
 
-	<section id='papel' class="relative max-sm:min-h-[100dvh] max-sm:w-full max-sm:overflow-hidden">
-		<div class="max-sm:w-full max-sm:h-[100dvh] max-sm:flex max-sm:flex-col max-sm:justify-center">
+	<section id='papel' class="relative h-[80dvh] w-full overflow-hidden">
+		<div class="w-full h-full flex flex-col justify-center">
 			<div id="rollo-top"></div>
 			<div class="carrusel">
 				<picture class="carrusel__container">
 					<div class="carrusel__slide">
-						<img src={F1.src} alt="Foto de los novios" class="w-full h-full" />
+						<img src={Foto1.src} alt="Foto de los novios" class="img-carrusel" />
 					</div>
 					<div class="carrusel__slide">
-						<img src={F2.src} alt="Foto de los novios" class="" />
+						<img src={Foto2.src} alt="Foto de los novios" class="img-carrusel" />
 					</div>
 					<div class="carrusel__slide">
-						<img src={F4.src} alt="Foto de los novios" class="" />
+						<img src={Foto3.src} alt="Foto de los novios" class="img-carrusel" />
 					</div>
 					<div class="carrusel__slide">
-						<img src={F3.src} alt="Foto de los novios" class="" />
+						<img src={Foto4.src} alt="Foto de los novios" class="img-carrusel" />
 					</div>
 					<div class="carrusel__slide">
-						<img src={F6.src} alt="Foto de los novios" class="" />
+						<img src={Foto5.src} alt="Foto de los novios" class="img-carrusel" />
 					</div>
 					<div class="carrusel__slide">
-						<img src={F8.src} alt="Foto de los novios" class="" />
+						<img src={Foto6.src} alt="Foto de los novios" class="img-carrusel" />
 					</div>
 					<div class="carrusel__slide">
-						<img src={F7.src} alt="Foto de los novios" class="" />
+						<img src={Foto8.src} alt="Foto de los novios" class="img-carrusel" />
 					</div>
 					<div class="carrusel__slide">
-						<img src={F9.src} alt="Foto de los novios" class="" />
+						<img src={Foto7.src} alt="Foto de los novios" class="img-carrusel" />
+					</div>
+					<div class="carrusel__slide">
+						<img src={Foto9.src} alt="Foto de los novios" class="img-carrusel" />
+					</div>
+					<div class="carrusel__slide">
+						<img src={Foto10.src} alt="Foto de los novios" class="img-carrusel" />
+					</div>
+					<div class="carrusel__slide">
+						<img src={Foto11.src} alt="Foto de los novios" class="img-carrusel" />
+					</div>
+					<div class="carrusel__slide">
+						<img src={Foto12.src} alt="Foto de los novios" class="img-carrusel" />
+					</div>
+					<div class="carrusel__slide">
+						<img src={Foto13.src} alt="Foto de los novios" class="img-carrusel" />
+					</div>
+					<div class="carrusel__slide">
+						<img src={Foto14.src} alt="Foto de los novios" class="img-carrusel" />
+					</div>
+					<div class="carrusel__slide">
+						<img src={Foto15.src} alt="Foto de los novios" class="img-carrusel"	 />
+					</div>
+					<div class="carrusel__slide">
+						<img src={Foto16.src} alt="Foto de los novios" class="img-carrusel" />
 					</div>
 				</picture>
 			</div>
@@ -101,24 +128,14 @@ import F9 from '@/assets/novios/IMG_0196.jpg'
 	})
 
 	tl.to('#fondo', {duration: 1, scale: 1})
-		.to('#hero-postal', {duration: .25, opacity: 1, left: '0%'}, .1)
+		.to('#hero-postal', {duration: .25, opacity: 1}, .1)
 </script>
 
 <style>
-	.carrusel {
-		overflow: hidden;
-		width: 100%;
+	#division {
+		background-image: url('../assets/fondos/papel-1.webp');
 	}
-	.carrusel__container {
-		display: flex;
-		align-items: center;
-		height: 100%;
-		width: 100%;
-	}
-	.carrusel__slide {
-		min-width: 100%;
-		position: relative;
-	}
+	
 	.carrusel__slide::after, .carrusel__slide::before {
 		content: '';
 		position: absolute;
@@ -136,13 +153,12 @@ import F9 from '@/assets/novios/IMG_0196.jpg'
 
 
 	#papel {
-		background-image: url('../assets/novios/fondoPapel.png')
+		background-image: url('../assets/fondos/papel-2.webp');
 	}
 	#rollo-top, #rollo-bottom {
-		background-image: url('../assets/rollos/1_1@4x-8.png');
 		background-size: cover;
 		background-position: center;
-		height: 5%;
+		height: 6%;
 		width: 100%;
 		animation: efecto linear infinite 6s;
 	}
