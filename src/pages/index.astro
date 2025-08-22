@@ -1,45 +1,58 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import Fondo from '@/assets/fondos/novios.webp'
-import Division from '@/assets/fondos/division.webp'
-import Gif from '@/assets/fondos/tarjeta.gif'
+import Gif from '@/assets/fondos/tarjetas.gif'
+import Hilos from '@/assets/fondos/hilos.gif'
 import Novios from '@/assets/fondos/versiculo-novios.webp'
 import Foto1 from '@/assets/carrusel/01.webp'
 import Foto2 from '@/assets/carrusel/02.webp'
 import Foto3 from '@/assets/carrusel/03.webp'
 import Foto4 from '@/assets/carrusel/04.webp'
-import Foto5 from '@/assets/carrusel/05.webp'
 import Foto6 from '@/assets/carrusel/06.webp'
 import Foto7 from '@/assets/carrusel/07.webp'
-import Foto8 from '@/assets/carrusel/08.webp'
 import Foto9 from '@/assets/carrusel/09.webp'
 import Foto10 from '@/assets/carrusel/10.webp'
-import Foto11 from '@/assets/carrusel/11.webp'
 import Foto12 from '@/assets/carrusel/12.webp'
 import Foto13 from '@/assets/carrusel/13.webp'
 import Foto14 from '@/assets/carrusel/14.webp'
 import Foto15 from '@/assets/carrusel/15.webp'
 import Foto16 from '@/assets/carrusel/16.webp'
+import PapelMapa from '@/assets/fondos/papel-mapa.webp'
+import Mapa from '@/assets/fondos/mapa.png'
+import Hombres from '@/assets/fondos/link-hombres.webp'
+import Mujeres from '@/assets/fondos/link-mujeres.webp'
+import Vestimenta from '@/assets/fondos/codigo-vestimenta.webp'
+import Recomendaciones from '@/assets/fondos/recomendaciones.webp'
 ---
 
 <Layout>
-	<section class="max-sm:min-h-[150dvh]">
-		<picture id="fondo" class="fixed w-full scale-125">
+	<section class="h-[200vh]">
+		<picture id="fondo" class="fixed h-screen scale-[1.35]">
 			<img src={Fondo.src} alt="Foto de fondo" class="object-cover h-full brightness-70" />
 		</picture>
 
-		<div class="sticky top-0 overflow-hidden w-full h-[100dvh] flex items-center">
+		<div class="sticky top-0 overflow-hidden w-full h-screen flex items-center">
 			<img id="hero-postal" src={Gif.src} alt="Postales" >
 		</div>
 	</section>
 	
-	<section id='division' class="relative h-[80dvh] w-full overflow-hidden">
-		<h2 class="relative z-10 font-number text-5xl text-center mt-20">31 AGOSTO 2025</h2>
-		<h2 class="relative z-10 font-text text-4xl text-center">2:00 <b class="text-3xl">PM</b></h2>
-		<img src={Novios.src} alt="Foto de los novios" class="relative my-8 w-4/5 mx-auto" />
+	<section id='division' class="relative h-[80vh] overflow-hidden flex flex-col ">
+		<div>
+			<img src={Hilos.src} alt="Letras de la cuerda de 3 hilos" class="relative w-[85%] mx-auto">
+			<h2 class="relative font-parrafos text-[38px] -top-5 left-1/4 ml-3 text-[#5A3B2C]">31.08.2025</h2>
+			<p class="font-numeros text-3xl text-center text-[#5A3B2C] -mt-5"></p>
+		</div>
+		<div class="relative w-full h-full flex justify-center items-center">
+			<div class="relative w-52 z-10">
+				<img src={Novios.src} alt="Foto de los novios" class="" />
+			</div>
+			<p class="absolute text-[17px] font-parrafos mx-7 text-center mt-8 -rotate-3">
+				El amor es grande e increíblemente paciente. El amor es gentil y siempre amable con todos. Se niega a sentir celos cuando alguien más recibe una bendición. El amor no se jacta de sus logros ni exagera su propia importancia. El amor no trafica con la vergüenza y la falta de respeto, ni busca egoístamente su propio honor. El amor no se irrita fácilmente ni se ofende con rapidez. El amor celebra con alegría la honestidad y no encuentra placer en lo que está mal. El amor es un refugio seguro, ya que nunca deja de creer lo mejor de los demás. El amor nunca toma el fracaso como una derrota, ya que nunca se rinde.
+			</p>
+		</div>
 	</section>
 
-	<section id='papel' class="relative h-[80dvh] w-full overflow-hidden">
+	<section id='papel' class="relative h-[60vh]">
 		<div class="w-full h-full flex flex-col justify-center">
 			<div id="rollo-top"></div>
 			<div class="carrusel">
@@ -57,13 +70,7 @@ import Foto16 from '@/assets/carrusel/16.webp'
 						<img src={Foto4.src} alt="Foto de los novios" class="img-carrusel" />
 					</div>
 					<div class="carrusel__slide">
-						<img src={Foto5.src} alt="Foto de los novios" class="img-carrusel" />
-					</div>
-					<div class="carrusel__slide">
 						<img src={Foto6.src} alt="Foto de los novios" class="img-carrusel" />
-					</div>
-					<div class="carrusel__slide">
-						<img src={Foto8.src} alt="Foto de los novios" class="img-carrusel" />
 					</div>
 					<div class="carrusel__slide">
 						<img src={Foto7.src} alt="Foto de los novios" class="img-carrusel" />
@@ -73,9 +80,6 @@ import Foto16 from '@/assets/carrusel/16.webp'
 					</div>
 					<div class="carrusel__slide">
 						<img src={Foto10.src} alt="Foto de los novios" class="img-carrusel" />
-					</div>
-					<div class="carrusel__slide">
-						<img src={Foto11.src} alt="Foto de los novios" class="img-carrusel" />
 					</div>
 					<div class="carrusel__slide">
 						<img src={Foto12.src} alt="Foto de los novios" class="img-carrusel" />
@@ -95,6 +99,29 @@ import Foto16 from '@/assets/carrusel/16.webp'
 				</picture>
 			</div>
 			<div id="rollo-bottom"></div>
+		</div>
+	</section>
+
+	<section id="sect-map" class="relative h-[60vh] flex justify-center flex-wrap z-10">
+		<picture class="w-4/5">
+			<img src={PapelMapa.src} alt="Foto de fondo" class="object-cover h-full" />
+		</picture>
+		<picture class="absolute w-4/5">
+			<img id="map" src={Mapa.src} alt="Foto de fondo" class="object-cover h-full opacity-0" />
+		</picture>
+		<p class="font-numeros relative -top-5 text-end text-[14px] w-48 translate-x-20">Cabañas la odisea <br>Vía a El Pantano, Subachoque, Cundinamarca <br>Inicio 2:30 pm</p>
+	</section>
+
+	<section id='vestimenta' class="relative h-screen overflow-hidden flex flex-col items-center">
+		<img src={Vestimenta.src} alt="Foto de fondo" class="w-64 mt-4" />
+		<div class="w-full flex justify-center ">
+			<a href="https://co.pinterest.com/hannecamilas/mujeres/" target="_blank" rel="noopener noreferrer" class="self-center w-1/2">
+				<img src={Mujeres.src} alt="Link a Instagram mujeres" class="w-5/6 justify-self-center translate-x-4" />
+			</a>
+			<a href="https://co.pinterest.com/hannecamilas/hombres/" target="_blank" rel="noopener noreferrer" class="self-center w-1/2">
+				<img src={Hombres.src} alt="Link a Instagram hombres" class="w-[153px] justify-self-center -translate-8" />
+			</a>
+			<img src={Recomendaciones.src} alt="Recomendaciones de vestimenta" class="absolute w-full bottom-8 pl-3 pr-1" />
 		</div>
 	</section>
 </Layout>
@@ -118,7 +145,7 @@ import Foto16 from '@/assets/carrusel/16.webp'
 		)
 	])
 	
-
+	carrusel
 	gsap.registerPlugin(ScrollTrigger)
 
 	const tl = gsap.timeline({
@@ -127,13 +154,13 @@ import Foto16 from '@/assets/carrusel/16.webp'
 		}
 	})
 
-	tl.to('#fondo', {duration: 1, scale: 1})
-		.to('#hero-postal', {duration: .25, opacity: 1}, .1)
+	tl.to('#fondo', {duration: .02, scale: 1})
 </script>
 
 <style>
 	#division {
-		background-image: url('../assets/fondos/papel-1.webp');
+		background-image: url('../assets/fondos/fondo-rasgado.webp');
+		background-size: cover;
 	}
 	
 	.carrusel__slide::after, .carrusel__slide::before {
@@ -145,45 +172,76 @@ import Foto16 from '@/assets/carrusel/16.webp'
 		background-color: #000;
 	}
 	.carrusel__slide::after {
-		right: 0;
+		right: -1px;
 	}
 	.carrusel__slide::before {
-		left: 0;
+		left: -1px;
 	}
 
 
 	#papel {
 		background-image: url('../assets/fondos/papel-2.webp');
+		background-size: cover;
 	}
 	#rollo-top, #rollo-bottom {
 		background-size: cover;
 		background-position: center;
 		height: 6%;
 		width: 100%;
-		animation: efecto linear infinite 6s;
+		z-index: 50;
+		animation: efecto linear infinite 4s;
+		background-image: url('../assets/rollos/1_1@4x-8.png');
 	}
 	#rollo-top {
 		rotate: 180deg;
+	}
+
+	#sect-map {
+		background-image: url('../assets/fondos/papel-2.webp');
+		background-size: cover;
+	}
+
+	#map {
+		view-timeline-name: --map;
+		view-timeline-axis: block;
+
+		animation-timeline: --map;
+		animation-name: show;
+		animation-range: 15% 60%;
+		animation-fill-mode: both;
+	}
+
+	#vestimenta {
+		background-image: url('../assets/fondos/papel-2.webp');
+		background-size: contain;
 	}
 
 	@keyframes efecto {
 		0% {
 			background-image: url('../assets/rollos/1_1@4x-8.png')
 		}
-		20% {
+		25% {
 			background-image: url('../assets/rollos/2_1@4x-8.png')
 		}
-		40% {
+		50% {
 			background-image: url('../assets/rollos/4_1@4x-8.png')
 		}
-		60% {
-			background-image: url('../assets/rollos/5@4x-8.png')
-		}
-		80% {
+		75% {
 			background-image: url('../assets/rollos/6@4x-8.png')
 		}
 		100% {
 			background-image: url('../assets/rollos/7@4x-8.png')
+		}
+	}
+
+	@keyframes show {
+		from {
+			opacity: 0;
+			scale: 90%;
+		}
+		to {
+			opacity: 1;
+			scale: 100%;
 		}
 	}
 </style>
