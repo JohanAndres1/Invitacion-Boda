@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: 'Ampersand';
-  src: url('/public/fonts/Ampersand.woff2') format('woff2');
+  src: url('/fonts/Ampersand.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: auto;
