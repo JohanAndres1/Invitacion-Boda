@@ -23,6 +23,9 @@ import Hombres from '@/assets/fondos/link-hombres.webp'
 import Mujeres from '@/assets/fondos/link-mujeres.webp'
 import Vestimenta from '@/assets/fondos/codigo-vestimenta.webp'
 import Recomendaciones from '@/assets/fondos/recomendaciones.webp'
+import Confirmacion from '@/assets/fondos/confirmacion.webp'
+import Playlist from '@/assets/fondos/playlist.webp'
+import Asistencia from '@/assets/fondos/asistencia.webp'
 ---
 
 <Layout>
@@ -40,7 +43,7 @@ import Recomendaciones from '@/assets/fondos/recomendaciones.webp'
 		<div>
 			<img src={Hilos.src} alt="Letras de la cuerda de 3 hilos" class="relative w-[85%] mx-auto">
 			<h2 class="relative font-parrafos text-[38px] -top-5 left-1/4 ml-3 text-[#5A3B2C]">31.08.2025</h2>
-			<p class="font-numeros text-3xl text-center text-[#5A3B2C] -mt-5"></p>
+			<!-- <p class="font-numeros text-3xl text-center text-[#5A3B2C] -mt-5"></p> -->
 		</div>
 		<div class="relative w-full h-full flex justify-center items-center">
 			<div class="relative w-52 z-10">
@@ -109,21 +112,33 @@ import Recomendaciones from '@/assets/fondos/recomendaciones.webp'
 		<picture class="absolute w-4/5">
 			<img id="map" src={Mapa.src} alt="Foto de fondo" class="object-cover h-full opacity-0" />
 		</picture>
-		<p class="font-numeros relative -top-5 text-end text-[14px] w-48 translate-x-20">Cabañas la odisea <br>Vía a El Pantano, Subachoque, Cundinamarca <br>Inicio 2:30 pm</p>
+		<p class="font-numeros relative -top-3 text-end text-[14px] w-48 translate-x-20">Cabañas la odisea <br>Vía a El Pantano, Subachoque, Cundinamarca <br>Inicio 2:30 pm</p>
 	</section>
 
-	<section id='vestimenta' class="relative h-screen overflow-hidden flex flex-col items-center">
+	<section id='vestimenta' class="relative overflow-hidden flex flex-col items-center">
 		<img src={Vestimenta.src} alt="Foto de fondo" class="w-64 mt-4" />
-		<div class="w-full flex justify-center ">
+		<div class="w-full flex justify-center flex-wrap">
 			<a href="https://co.pinterest.com/hannecamilas/mujeres/" target="_blank" rel="noopener noreferrer" class="self-center w-1/2">
 				<img src={Mujeres.src} alt="Link a Instagram mujeres" class="w-5/6 justify-self-center translate-x-4" />
 			</a>
 			<a href="https://co.pinterest.com/hannecamilas/hombres/" target="_blank" rel="noopener noreferrer" class="self-center w-1/2">
 				<img src={Hombres.src} alt="Link a Instagram hombres" class="w-[153px] justify-self-center -translate-8" />
 			</a>
-			<img src={Recomendaciones.src} alt="Recomendaciones de vestimenta" class="absolute w-full bottom-8 pl-3 pr-1" />
+			<img src={Recomendaciones.src} alt="Recomendaciones de vestimenta" class="relative w-full bottom-8 pl-3 pr-1" />
 		</div>
 	</section>
+	
+	<footer id="asistencia" class="relative h-[55vh] flex flex-col items-center justify-center">
+		<div class="w-full flex justify-center translate-x-10">
+			<img src={Asistencia.src} alt="Aviso para confirmar asistencia" class="w-40">
+		</div>
+		<a href="https://wa.me/573224478818?text=Hola%20quiero%20confirmar%20mi%20asistencia" target="_blank" class="-translate-x-3.5">
+			<img src={Confirmacion.src} alt="confinrmacion" class="w-72" />
+		</a>
+		<a href="https://open.spotify.com/playlist/6fZVMWG7438nKK75PjP5AM?si=ccANpr8RTlObgnDJ3OCBSQ&pt=62620e47cd1c9855560569615807e948" target="_blank" class="translate-x-14 -translate-y-14">
+			<img src={Playlist.src} alt="icono para playlist" class="w-36 ">
+		</a>
+	</footer>
 </Layout>
 
 
@@ -213,7 +228,14 @@ import Recomendaciones from '@/assets/fondos/recomendaciones.webp'
 
 	#vestimenta {
 		background-image: url('../assets/fondos/papel-2.webp');
-		background-size: contain;
+		background-size: cover;
+		background-position: top;
+	}
+
+	#asistencia {
+		background-image: url('../assets/fondos/papel-2.webp');
+		background-size: cover;
+		background-position: bottom;
 	}
 
 	@keyframes efecto {
