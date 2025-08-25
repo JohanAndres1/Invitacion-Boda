@@ -5,7 +5,6 @@ import Gif from '@/assets/fondos/tarjetas.gif'
 import Hilos from '@/assets/fondos/hilos.gif'
 import Novios from '@/assets/fondos/versiculo-novios.webp'
 import Foto1 from '@/assets/carrusel/01.webp'
-import Foto2 from '@/assets/carrusel/02.webp'
 import Foto3 from '@/assets/carrusel/03.webp'
 import Foto4 from '@/assets/carrusel/04.webp'
 import Foto6 from '@/assets/carrusel/06.webp'
@@ -64,9 +63,6 @@ import Asistencia from '@/assets/fondos/asistencia.webp'
 						<img src={Foto1.src} alt="Foto de los novios" class="img-carrusel" />
 					</div>
 					<div class="carrusel__slide">
-						<img src={Foto2.src} alt="Foto de los novios" class="img-carrusel" />
-					</div>
-					<div class="carrusel__slide">
 						<img src={Foto3.src} alt="Foto de los novios" class="img-carrusel" />
 					</div>
 					<div class="carrusel__slide">
@@ -107,10 +103,10 @@ import Asistencia from '@/assets/fondos/asistencia.webp'
 
 	<section id="sect-map" class="relative h-[60vh] flex justify-center flex-wrap z-10">
 		<picture class="w-4/5">
-			<img src={PapelMapa.src} alt="Foto de fondo" class="object-cover h-full" />
+			<img src={PapelMapa.src} alt="Foto de fondo" class="w-full" />
 		</picture>
 		<picture class="absolute w-4/5">
-			<img id="map" src={Mapa.src} alt="Foto de fondo" class="object-cover h-full opacity-0" />
+			<img id="map" src={Mapa.src} alt="Foto de fondo" class="w-full opacity-0" />
 		</picture>
 		<p class="font-numeros relative -top-3 text-end text-[14px] w-48 translate-x-20">Cabañas la odisea <br>Vía a El Pantano, Subachoque, Cundinamarca <br>Inicio 2:30 pm</p>
 	</section>
@@ -119,7 +115,7 @@ import Asistencia from '@/assets/fondos/asistencia.webp'
 		<img src={Vestimenta.src} alt="Foto de fondo" class="w-64 mt-4" />
 		<div class="w-full flex justify-center flex-wrap">
 			<a href="https://co.pinterest.com/hannecamilas/mujeres/" target="_blank" rel="noopener noreferrer" class="self-center w-1/2">
-				<img src={Mujeres.src} alt="Link a Instagram mujeres" class="w-5/6 justify-self-center translate-x-4" />
+				<img src={Mujeres.src} alt="Link a Instagram mujeres" class="w-40 justify-self-center translate-x-4" />
 			</a>
 			<a href="https://co.pinterest.com/hannecamilas/hombres/" target="_blank" rel="noopener noreferrer" class="self-center w-1/2">
 				<img src={Hombres.src} alt="Link a Instagram hombres" class="w-[153px] justify-self-center -translate-8" />
@@ -135,7 +131,7 @@ import Asistencia from '@/assets/fondos/asistencia.webp'
 		<a href="https://wa.me/573224478818?text=Hola%20quiero%20confirmar%20mi%20asistencia" target="_blank" class="-translate-x-3.5">
 			<img src={Confirmacion.src} alt="confinrmacion" class="w-72" />
 		</a>
-		<a href="https://open.spotify.com/playlist/6fZVMWG7438nKK75PjP5AM?si=ccANpr8RTlObgnDJ3OCBSQ&pt=62620e47cd1c9855560569615807e948" target="_blank" class="translate-x-14 -translate-y-14">
+		<a href="https://open.spotify.com/playlist/6fZVMWG7438nKK75PjP5AM?si=hvUbMw8jTu2OsQxdrQYZYQ&pi=tCDK2j1tS6eBH" target="_blank" class="translate-x-14 -translate-y-14">
 			<img src={Playlist.src} alt="icono para playlist" class="w-36 ">
 		</a>
 	</footer>
@@ -153,14 +149,13 @@ import Asistencia from '@/assets/fondos/asistencia.webp'
 	const carrusel = EmblaCarousel(emblaNode, {loop: true}, [
 		AutoScroll(
 			{
-				startDelay: 10,
+				startDelay: .5,
 				stopOnInteraction: false,
 				speed: 1.5
 			}
 		)
 	])
 	
-	carrusel
 	gsap.registerPlugin(ScrollTrigger)
 
 	const tl = gsap.timeline({
